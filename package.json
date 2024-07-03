@@ -1,0 +1,12 @@
+{
+    "name": "the-cloud",
+    "private": true,
+    "scripts": {
+        "check": "biome check --write ."
+    },
+    "packageManager": "pnpm@9.4.0",
+    "devDependencies": {
+        "@biomejs/biome": "^1.8.3",
+        "@types/bun": "^1.1.6"
+    }
+}
