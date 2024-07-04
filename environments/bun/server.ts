@@ -42,13 +42,13 @@ const server = Bun.serve({
                 }
                 const body = (await request.json()) as {
                     functionName: string;
-                    filepaths: string;
+                    filepath: string;
                 };
                 const entrypoint = body.functionName
                     ? body.functionName.split(".")
                     : [];
                 const modulepath = path.join(
-                    body.filepaths,
+                    body.filepath,
                     entrypoint[0] || ""
                 );
                 const result = await loadFunction(modulepath, entrypoint[1]);
